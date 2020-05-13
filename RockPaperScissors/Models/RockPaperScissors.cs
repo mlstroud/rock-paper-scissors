@@ -14,5 +14,16 @@ namespace Game.Models
       Random rand = new Random();
       ComputerChoice = _computerChoices[rand.Next(_computerChoices.Length)];
     }
+
+    public string GetGameResult()
+    {
+      string result = "";
+      if (UserChoice == ComputerChoice)
+      {
+        result = "draw";
+      }
+
+      return result;
+    }
   }
 }
