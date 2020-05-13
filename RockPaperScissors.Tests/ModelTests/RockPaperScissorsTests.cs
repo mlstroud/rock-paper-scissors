@@ -101,5 +101,17 @@ namespace Game.Tests
 
       Assert.AreEqual(result, "loss");
     }
+
+    [TestMethod]
+    public void GetGameResult_ReturnsLossForRockVPaper_Loss()
+    {
+      string userChoice = "rock";
+      RockPaperScissors round = new RockPaperScissors(userChoice);
+      round.ComputerChoice = "paper";
+
+      string result = round.GetGameResult();
+
+      Assert.AreEqual(result, "loss");
+    }
   }
 }
