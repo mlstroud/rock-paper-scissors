@@ -34,6 +34,10 @@ namespace Game.Models
       {
         result = "win";
       }
+      else
+      {
+        result = "loss";
+      }
 
       return result;
     }
