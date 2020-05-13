@@ -29,5 +29,17 @@ namespace Game.Tests
 
       Assert.AreEqual(true, result);
     }
+
+    [TestMethod]
+    public void GetGameResult_ReturnsDrawForSameChoices_Draw()
+    {
+      string userChoice = "paper";
+      RockPaperScissors round = new RockPaperScissors(userChoice);
+      round.ComputerChoice = "paper";
+
+      string result = round.GetGameResult();
+
+      Assert.AreEqual(result, "draw");
+    }
   }
 }
