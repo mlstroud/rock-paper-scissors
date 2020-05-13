@@ -65,5 +65,17 @@ namespace Game.Tests
 
       Assert.AreEqual(result, "win");
     }
+
+    [TestMethod]
+    public void GetGameResult_ReturnsWinForScissorsVPaper_Win()
+    {
+      string userChoice = "scissors";
+      RockPaperScissors round = new RockPaperScissors(userChoice);
+      round.ComputerChoice = "paper";
+
+      string result = round.GetGameResult();
+
+      Assert.AreEqual(result, "win");
+    }
   }
 }
